@@ -1,0 +1,67 @@
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'API Documentation',
+  description:
+    '',
+}
+
+export const sections = [
+  { title: 'Кухонные гарнитуры', id: 'kitchen' },
+  { title: 'Гардеробные', id: 'wadrobe' },
+]
+
+export const dataKitchen = {
+  relevance: "Актуально с 1 января 2024 года",
+  id: "kitchen",
+  title: "Кухонные гарнитуры",
+  coefficient: "370",
+  discount: "35%",
+  additionalDiscount: "10%"
+}
+export const dataWadrobe = {
+  relevance: "Актуально с 1 января 2024 года",
+  id: "wadrobe",
+  title: "Гардеробные",
+  coefficient: "370",
+  discount: "35%",
+  additionalDiscount: "10%"
+}
+
+<HeroPattern />
+
+# Цены
+
+На этой странице предоставлены данные по актуальным коэффициентам и скидкам. Вы можете запросить дополнительную скидку, отправив форму.
+
+---
+Добавить информацию по формировнию итоговой цены
+---
+
+
+
+
+<div className="not-prose mb-16 mt-6 flex gap-3">
+  <Button href="/quickstart" arrow="right" children="Quickstart" />
+  <Button href="/sdks" variant="outline" children="Explore SDKs" />
+</div>
+
+## Getting started {{ anchor: false }}
+
+To get started, create a new application in your [developer settings](#), then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your integration is ready to go live, publish it to our [integrations directory](#) to reach the Protocol community. {{ className: 'lead' }}
+
+<div className="not-prose">
+  <Button
+    href="/sdks"
+    variant="text"
+    arrow="right"
+    children="Get your API key"
+  />
+</div>
+
+<Guides />
+
+<Resources data={dataKitchen}/>
+<Resources data={dataWadrobe} />
